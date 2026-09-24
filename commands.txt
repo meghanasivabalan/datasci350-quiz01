@@ -101,5 +101,23 @@ git commit -m "Update analyss"
 git commit --amend -m "Update analysis"
 git status
 git add commands.txt
+git commit -m "Update command log"
+git switch main
+git log --oneline
+10fd22d (HEAD -> station-upgrade) Update command log
+e59b60c Update analysis
+a06ef7c Add gitignore
+93c499d Update station files
+232edcf Add results directory
+a22b29e (origin/main, origin/HEAD, main) docs(readme): note committing commands.txt before task 18 and force push for bonus 2
+b645f85 feat: quiz 01 starter files
+
+git add commands.txt
+git commit -m "Add command log"
+git push
+git status
+
+
+
 
 
