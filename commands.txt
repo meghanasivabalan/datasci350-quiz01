@@ -1,0 +1,17 @@
+git clone https://github.com/meghanasivabalan/datasci350-quiz01.git
+cd datasci350-quiz01
+pwd
+git status
+touch commands.txt
+git switch -c station-upgrade
+git branch
+mkdir results
+touch results/summary.md
+echo "Analysis of the first field season." >> results/summary.md
+cat results/summary.md
+git add results
+git commit -m "Add results directory"
+mv data/sensor-readings.csv data/station-data.csv
+mkdir scripts/archive && cp scripts/*.py scripts/archive/
+rm docs/notes.md
+git add .
