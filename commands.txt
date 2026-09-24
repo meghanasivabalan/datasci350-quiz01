@@ -96,6 +96,10 @@ index 70ea841..c5af7da 100644
 
 The lines starting with + mean that they were added to the file in comparison to the previous committed version. 
 
-
+git add .
+git commit -m "Update analyss"
+git commit --amend -m "Update analysis"
+git status
+git add commands.txt
 
 
