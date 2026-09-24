@@ -116,8 +116,22 @@ git add commands.txt
 git commit -m "Add command log"
 git push
 git status
+git switch main
+git merge station-upgrade
+git branch
+git log --oneline
+2614a15 (HEAD -> main, station-upgrade) Add command log
+10fd22d Update command log
+e59b60c Update analysis
+a06ef7c Add gitignore
+93c499d Update station files
+232edcf Add results directory
+a22b29e (origin/main, origin/HEAD) docs(readme): note committing commands.txt before task 18 and force push for bonus 2
+b645f85 feat: quiz 01 starter files
 
-
-
+git add commands.txt
+git commit -m "Add command log"
+git push
+git status
 
 
