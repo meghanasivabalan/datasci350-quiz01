@@ -3,6 +3,7 @@ cd datasci350-quiz01
 pwd
 git status
 touch commands.txt
+
 git switch -c station-upgrade
 git branch
 mkdir results
@@ -15,3 +16,86 @@ mv data/sensor-readings.csv data/station-data.csv
 mkdir scripts/archive && cp scripts/*.py scripts/archive/
 rm docs/notes.md
 git add .
+git commit -m "Update station files"
+echo "temp/" >> .gitignore
+echo "log?.txt" >> .gitignore
+cat .gitignore
+git add .gitignore && git commit -m "Add gitignore"
+touch log{1..4}.txt
+git status
+On branch station-upgrade
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   commands.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+They do not appear because the .gitignore pattern log?.txt matches with log1.txt, log2.txt, log3.txt, and log4.txt, so Git ignores them.
+
+wc -l < data/station-data.csv >> results/summary.md
+cat results/summary.md
+nano scripts/03-plot.py
+git diff
+
+diff --git a/commands.txt b/commands.txt
+index b58fea0..5d6141b 100644
+--- a/commands.txt
++++ b/commands.txt
+@@ -3,6 +3,7 @@ cd datasci350-quiz01
+ pwd
+ git status
+ touch commands.txt
++
+ git switch -c station-upgrade
+ git branch
+ mkdir results
+@@ -14,4 +15,26 @@ git commit -m "Add results directory"
+ mv data/sensor-readings.csv data/station-data.csv
+ mkdir scripts/archive && cp scripts/*.py scripts/archive/
+ rm docs/notes.md
+-git add .
+\ No newline at end of file
++git add .
++git commit -m "Update station files"
++echo "temp/" >> .gitignore
++echo "log?.txt" >> .gitignore
++cat .gitignore
++git add .gitignore && git commit -m "Add gitignore"
++touch log{1..4}.txt
++git status
++On branch station-upgrade
++Changes not staged for commit:
++  (use "git add <file>..." to update what will be committed)
++  (use "git restore <file>..." to discard changes in working directory)
++       modified:   commands.txt
++
++no changes added to commit (use "git add" and/or "git commit -a")
++They do not appear because the .gitignore pattern log?.txt matches with log1.txt, log2.txt, log3.txt, and log4.txt, so Git ignores them.
++
++wc -l < data/station-data.csv >> results/summary.md
++cat results/summary.md
++nano scripts/03-plot.py
++git diff
++
++
+diff --git a/results/summary.md b/results/summary.md
+index 295821a..817eec6 100644
+--- a/results/summary.md
++++ b/results/summary.md
+@@ -1 +1,2 @@
+ Analysis of the first field season.
++      41
+diff --git a/scripts/03-plot.py b/scripts/03-plot.py
+index 70ea841..c5af7da 100644
+--- a/scripts/03-plot.py
++++ b/scripts/03-plot.py
+@@ -1,3 +1,4 @@
++# Reviewed for the field season report
+ # Plot the daily temperature readings
+ # Prints a simple text chart, one bar per reading.
+
+The lines starting with + mean that they were added to the file in comparison to the previous committed version. 
+
+
+
+
